@@ -1,0 +1,61 @@
+.bread-crumbs {
+  padding-bottom: 32px;
+
+  &__container {
+    margin-top: -14px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 5px;
+    }
+
+    // выделение цветом текущей страницы
+    &:last-child {
+      & > a {
+        color: var(--color-primary-shade);
+      }
+    }
+  }
+
+  // стили для ссылок
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-grey);
+    transition: color .3s ease-in-out;
+    outline: none;
+
+    // интерактивные стили ссылок
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:focus-visible {
+      color: var(--color-primary-shade);
+    }
+
+    &:active {
+      color: var(--color-primary-shade);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .bread-crumbs__container {
+    max-width: 981px;
+    margin-top: -12px;
+  }
+}

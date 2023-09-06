@@ -1,0 +1,244 @@
+.rating {
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__card-wraper {
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 420px);
+    gap: 32px;
+  }
+
+  &__card {
+    padding: 32px 15px 30px 15px;
+    grid-column: 3 span;
+    grid-row: 1 span;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--color-grey-light);
+
+    &-stars {
+      padding: 0 15px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--color-secondary);
+
+      & > svg {
+        margin-right: 3px;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    &-img {
+      margin-bottom: 13px;
+    }
+
+    &-describe {
+      padding: 0 15px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    &-title {
+      margin-bottom: 22px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 129%;
+      color: var(--color-black);
+    }
+
+    &-price {
+      margin-bottom: 23px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--color-grey-shade);
+    }
+
+    &-btn {
+      padding: 17px 33px;
+    }
+
+    &:nth-child(6) {
+      & .rating__card-img {
+        margin-left: -3px;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    padding: 20px 34px;
+    grid-row: 1 span;
+    grid-column: 3 span;
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+
+    &:hover {
+      border-color: var(--color-primary-light);
+      background-color: var(--color-primary-light);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-primary-shade);
+      background-color: var(--color-primary-light);
+    }
+
+    &:active {
+      border-color: var(--color-primary-shade);
+      background-color: var(--color-primary-shade);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .rating {
+    &__container {
+      max-width: 981px;
+    }
+
+    &__card-wraper {
+      grid-template-columns: repeat(9, 1fr);
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+
+  .rating {
+    &__container {
+      max-width: 654px;
+    }
+
+    &__card {
+      &-wraper {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 420px);
+      }
+
+      &-img {
+        width: 100%;
+      }
+
+      &:nth-child(6) {
+        & .rating__card-img {
+          margin-left: -3px;
+          width: 102%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+
+  .rating {
+    &__container {
+      padding: 70px 4px 70px 4px;
+      max-width: 303px;
+    }
+
+    &__card-wraper {
+      grid-template-rows: repeat(3, 278px);
+      gap: 16px;
+    }
+
+    &__card {
+      padding: 16px;
+
+      &-stars {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 36px;
+        font-size: 12px;
+        line-height: 130%;
+
+        & > svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
+      &-img {
+        margin-bottom: 18px;
+      }
+
+      &-describe {
+        padding: 0;
+      }
+
+      &-title {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 130%;
+      }
+
+      &-price {
+        margin-bottom: 15px;
+      }
+
+      &-btn {
+        padding: 10px 23px;
+      }
+
+      &:nth-child(2) {
+        .rating__card-img {
+          margin-bottom: 14px;
+        }
+      }
+
+      &:nth-child(3) {
+        .rating__card-img {
+          margin-bottom: 14px;
+        }
+      }
+
+      &:nth-child(4) {
+        .rating__card-img {
+          margin-bottom: 8px;
+        }
+      }
+
+      &:nth-child(5) {
+        .rating__card-img {
+          margin-bottom: 11px;
+        }
+      }
+
+      &:nth-child(6) {
+        .rating__card-img {
+          margin-bottom: 11px;
+          margin-left: 0;
+          width: 101%;
+        }
+      }
+    }
+
+    &__btn {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+}

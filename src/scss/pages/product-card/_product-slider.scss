@@ -1,0 +1,331 @@
+.product-slider {
+  padding-bottom: 70px;
+
+  &__title {
+    margin: 2px 0 24px 1px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--color-black);
+  }
+
+  &__item {
+    padding: 32px 15px 30px 15px;
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 100%;
+    min-height: 420px;
+    background-color: var(--color-grey-light);
+
+    & img {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__stars {
+    padding: 0 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-secondary);
+
+    & > svg {
+      margin-right: 2px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__describe {
+    padding: 0 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &-title {
+      margin-bottom: 21px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 129%;
+      color: var(--color-black);
+    }
+
+    &-price {
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--color-grey-shade);
+    }
+
+    &-btn {
+      padding: 17px 34px;
+    }
+  }
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+
+  .slick-slide {
+    padding: 0 16px;
+
+    &:nth-child(3) {
+      &  img {
+        margin-left: -3px;
+      }
+    }
+  }
+
+  // общие стили для стрелок
+  .slick-arrow {
+    position: absolute;
+    top: -56px;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    line-height: 0;
+    outline: none;
+    cursor: pointer;
+
+    & > svg path {
+      transition: stroke .3s ease-in-out;
+    }
+
+    & > svg circle {
+      transition: stroke .3s ease-in-out, fill .3s ease-in-out;
+    }
+
+    &:hover {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary);
+        fill: var(--color-primary);
+      }
+    }
+
+    &:focus-visible {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary);
+        fill: var(--color-primary-light);
+      }
+    }
+
+    &:active {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary-shade);
+        fill: var(--color-primary-shade);
+      }
+    }
+  }
+
+  // стили для стрелки предыдущий слайд
+  .slick-prev {
+    right: 45px;
+    transform: rotate(180deg);
+
+    & svg circle {
+      fill: transparent;
+    }
+
+    & svg path {
+      stroke: var(--color-primary);
+    }
+
+  }
+
+  // стили для стрелки следующий слайд
+  .slick-next {
+    right: 0;
+
+    & svg circle {
+      fill: transparent;
+    }
+
+    & svg path {
+      stroke: var(--color-primary);
+    }
+  }
+
+  // стили для не активной стрелки
+  .slick-disabled {
+
+    & svg circle {
+      fill: transparent;
+      stroke: var(--color-grey);
+    }
+
+    & svg path {
+      stroke: var(--color-grey);
+    }
+  }
+
+  // костыль // сброс стилей для не активной стрелки
+  .slick-arrow.slick-disabled {
+    &:hover {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+
+    &:focus-visible {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+
+    &:active {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .product {
+    &-slider {
+      &__container {
+        max-width: 981px;
+      }
+
+      &__card {
+        &-btn {
+          padding: 17px 33px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  .product {
+    &-slider {
+      &__container {
+        max-width: 654px;
+      }
+
+      &__item {
+        max-width: 296px;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+
+  .product {
+    &-slider {
+      padding-bottom: 118px;
+
+      &__container {
+        padding: 0px 4px;
+        max-width: 306px;
+      }
+
+      &__card {
+        &-btn {
+          padding: 10px 23px;
+        }
+      }
+
+      &__stars {
+        padding: 0;
+        font-size: 12px;
+        & > svg {
+          width: 13px;
+          height: 13px;
+        }
+      }
+
+      & .slick-list {
+        margin: 0 -3px;
+      }
+
+      & .slick-slide {
+        padding: 0 5px;
+      }
+
+      &__item {
+        padding: 18px 16px 16px 16px;
+        max-width: 140px;
+        min-height: 278px;
+
+        & .product-slider__card-img {
+          margin-bottom: 8px;
+
+          &--margin {
+            margin-bottom: 17px;
+          }
+        }
+      }
+
+      &__describe {
+        padding: 0;
+        &-title {
+          margin-bottom: 16px;
+          font-size: 16px;
+        }
+
+        &-price {
+          margin-bottom: 16px;
+          font-size: 16px;
+        }
+
+        &-btn {
+          padding: 10px 23px;
+        }
+      }
+
+      & .slick-arrow {
+        top: auto;
+        bottom: -48px;
+      }
+
+      & .slick-prev {
+        right: auto;
+        left: 110px;
+      }
+
+      & .slick-next {
+        right: 109px;
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+.cooperation {
+
+  &__container {
+    padding-bottom: 69px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    grid-column: 8 span;
+  }
+
+  &__page-title {
+    margin: 0 0 32px 0;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--color-black);
+    pointer-events: none;
+  }
+
+  &__title {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--color-black);
+    pointer-events: none;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 182%;
+    color: var(--color-grey-shade);
+    pointer-events: none;
+  }
+
+  &__benefit-list {
+    max-width: 630px;
+  }
+
+  &__benefit-item {
+    padding: 0 0 0 37px;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-grey-shade);
+    background-repeat: no-repeat;
+    background-position: top left;
+    pointer-events: none;
+
+    &:not(:last-child) {
+      margin: 0 0 12px 0;
+    }
+
+    &:first-child {
+      background-image: url("../img/benefit-icon-1.svg");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/benefit-icon-2.svg");
+    }
+
+    &:last-child {
+      background-image: url("../img/benefit-icon-3.svg");
+    }
+  }
+
+  &__guarantees-describe-text {
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--color-black);
+  }
+
+  &__describe-title {
+    margin: 0 0 12px 0;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-secondary);
+  }
+
+  &__describe {
+    &:not(:last-child) {
+      margin: 0 0 12px 0;
+    }
+  }
+
+  &__guarantees-list {
+    margin: 0 0 32px 0;
+    padding: 0 0 0 26px;
+    max-width: 840px;
+    list-style-type: none;
+    counter-reset: num;
+  }
+
+  &__guarantees-item {
+    position: relative;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 12px 0;
+    }
+
+    &::before {
+      content: counter(num) '.';
+      counter-increment: num;
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      left: -26px;
+      width: 15px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 180%;
+      color: var(--color-secondary);
+      text-align: left;
+    }
+  }
+
+  &__guarantees-describe {
+    padding: 21px 0 23px 109px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-image: url('../img/guarantees-describe-pencil.png');
+
+    &-text {
+      margin: 0;
+      max-width: 515px;
+      font-size: 24px;
+      line-height: 150%;
+      color: var(--color-black);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .cooperation {
+
+    &__container {
+      max-width: 981px;
+    }
+
+    &__inner {
+      grid-template-columns: repeat(9, 1fr);
+      gap: 30px;
+    }
+
+    &__guarantees-describe {
+      padding: 21px 0 21px 109px;
+    }
+  }
+
+  .bread-crumbs {
+    &__container {
+      max-width: 981px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  .cooperation {
+
+    &__container {
+      max-width: 654px;
+    }
+
+    &__inner {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 30px;
+    }
+
+    &__item {
+      grid-column: 6 span;
+    }
+  }
+
+  .bread-crumbs {
+    &__container {
+      max-width: 654px;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+
+  .cooperation {
+
+    &__container {
+      padding: 0 4px 48px 3px;
+      max-width: 306px;
+    }
+
+    &__inner {
+      gap: 26px;
+    }
+
+    &__page-title {
+      margin-bottom: 26px;
+      font-size: 24px;
+    }
+
+    &__title {
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    &__title--mobail {
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 179%;
+    }
+
+    &__benefit-item {
+      font-size: 14px;
+    }
+
+    &__guarantees-item {
+      line-height: 178%;
+
+      &:not(:last-child) {
+        margin: 0px 0 13px 0;
+      }
+    }
+
+    &__guarantees {
+      &-describe {
+        padding: 0px 55px 22px 52px;
+        background-size: 36px 54px;
+        background-position: 0px 9px;
+        &-text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .bread-crumbs {
+    display: none;
+  }
+}

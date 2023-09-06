@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/global/head.html')
+
+<body class="page-body">
+
+  <div class="site-container">
+
+    @include('partials/global/header.html')
+
+    <main>
+
+      <h1 class="visually-hidden">SitDownPls - интернет-магазин мебели.</h1>
+
+      @include('partials/pages/product card/bread-crumbs.html')
+
+      @include('partials/pages/product card/section-product-card.html')
+
+      @include('partials/pages/product card/section-product-slider.html')
+
+    </main>
+
+    @include('partials/global/footer.html')
+
+    @include('partials/pages/product card/section-modals.html')
+
+  </div>
+
+</body>
+</html>

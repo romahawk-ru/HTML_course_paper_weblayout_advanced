@@ -1,0 +1,115 @@
+.new-collection {
+
+  background-image: url("../img/new-collection-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    padding-top: 154px;
+    padding-bottom: 150px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__title {
+    margin: 0 0 48px 0;
+    max-width: 500px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 121%;
+    color: var(--color-white);
+    pointer-events: none;
+
+    & > span {
+      font-family: 'Playfair Display';
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 120%;
+      color: var(--color-gold);
+    }
+  }
+
+  &__link {
+    padding: 20px 30px;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--color-primary-light);
+      background-color: var(--color-primary-light);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-primary-shade);
+      background-color: var(--color-primary-light);
+    }
+
+    &:active {
+      border-color: var(--color-primary-shade);
+      background-color: var(--color-primary-shade);
+    }
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .new-collection {
+    &__container {
+      max-width: 981px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  .new-collection {
+    &__container {
+      max-width: 725px;
+    }
+  }
+
+}
+
+@media (max-width: 568px) {
+
+  .new-collection {
+    position: relative;
+    &__container {
+      padding: 32px 4px 22px 4px;
+      max-width: 303px;
+    }
+
+    &__title {
+      margin: 0 0 89px 0;
+      max-width: 200px;
+      font-size: 16px;
+      line-height: 120%;
+
+      & > span {
+        font-size: 24px;
+        line-height: 120%;
+      }
+    }
+
+    &__link {
+      position: absolute;
+      bottom: -92px;
+      width: 100%;
+      max-width: 296px;
+      text-align: center;
+    }
+  }
+}
+

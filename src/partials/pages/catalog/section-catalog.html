@@ -1,0 +1,922 @@
+<section class="catalog" id="catalog">
+  <div class="container catalog__container">
+    <h2 class="title catalog__cards-title catalog__cards-title-mobile">Каталог</h2>
+    <div class="catalog__wrapper">
+      <aside class="catalog__filter filter">
+        <h3 class="title filter__title">
+          Фильтровать по:
+        </h3>
+        <h3 class="title filter__title-mobile">
+          Фильтры:
+        </h3>
+
+        <div class="filter__wrapper">
+          <div class="filter__wrapper-item filter__category">
+            <h4 class="title filter__wrapper-title filter__category-title" data-name="filterCategory">
+              Категория
+            </h4>
+            <ul class="filter__list filter__menu" data-filter="filterCategory">
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-sofas" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" checked name="Диваны" id="checkbox-sofas">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Диваны</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-chairs" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Кресла" id="checkbox-chairs">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Кресла</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-poufs" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Пуфы" id="checkbox-poufs">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Пуфы</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-beds" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Кровати" id="checkbox-beds">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Кровати</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-curbstones" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Тумбы" id="checkbox-curbstones">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Тумбы</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-dressers" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Комоды" id="checkbox-dressers">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Комоды</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-chair" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Стулья" id="checkbox-chair">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Стулья</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-tables" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Столы" id="checkbox-tables">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Столы</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-accessories" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Аксессуары" id="checkbox-accessories">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Аксессуары</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter__wrapper-item filter__price">
+            <h4 class="title filter__wrapper-title filter__price-title" data-name="filterPrice">
+              Цена
+            </h4>
+
+            <div class="filter__price-inputs filter__menu" data-filter="filterPrice">
+              <label class="filter__price-label">
+                <span>от</span>
+                <input type="text" class="filter__price-input" placeholder="0" id="price-min">
+              </label>
+              <label class="filter__price-label">
+                <span>до</span>
+                <input type="text" class="filter__price-input" placeholder="500 000" id="price-max">
+              </label>
+            </div>
+
+            <div id="range-slider"></div> <!-- элемент слайдера диапазона -->
+
+          </div>
+
+          <div class="filter__wrapper-item filter__sale">
+            <h4 class="title filter__wrapper-title filter__sale-title" data-name="filterSale">
+              Скидка
+            </h4>
+            <ul class="filter__list filter__menu" data-filter="filterSale">
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-more" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Более 5000" id="checkbox-more">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Более 5&nbsp;000</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-less-than" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Менее 5000" id="checkbox-less-than">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Менее 5&nbsp;000</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-not-important" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" checked name="Не важно" id="checkbox-not-important">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Не важно</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter__wrapper-item filter__color">
+            <h4 class="title filter__wrapper-title filter__color-title" data-name="filterColor">
+              Цвет
+            </h4>
+
+            <ul class="filter__list filter__menu" data-filter="filterColor">
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-brown" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Коричневы" id="checkbox-brown">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Коричневый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-black" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Черный" id="checkbox-black">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Черный</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-beige" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Бежевый" id="checkbox-beige">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Бежевый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-gray" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Серый" id="checkbox-gray">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Серый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-white" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Белый" id="checkbox-white">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Белый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-blue" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Синий" id="checkbox-blue">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Синий</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-orange" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" checked name="Оранжевый" id="checkbox-orange">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Оранжевый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-yellow" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Желтый" id="checkbox-yellow">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Желтый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label" for="checkbox-green" tabindex="-1">
+                  <input class="filter__checkbox visually-hidden" type="checkbox" name="Зеленый" id="checkbox-green">
+                  <span class="filter__custom-checkbox"></span>
+                  <span class="filter__name">Зеленый</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <article class="catalog__baner">
+        <div class="catalog__baner-card">
+          <picture>
+            <source srcset="/img/webp/catalog-baner-img-1.webp, /img/webp/catalog-baner-img-1-2x.webp 2x, /img/webp/catalog-baner-img-1-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+
+            <img
+              class="catalog__baner-img"
+              src="/img/catalog-baner-img-1.jpg"
+              srcset="/img/catalog-baner-img-1-2x.jpg 2x, /img/catalog-baner-img-1-3x.jpg 3x"
+              alt="Изображение банера"
+            >
+          </picture>
+          <div class="catalog__baner-describe">
+            <h4 class="catalog__baner-title">
+              Оксфорд 1950
+            </h4>
+            <span>Новая коллекция изысканных кресел</span>
+            <a href="#" class="catalog__baner-bottom-link">
+              <span>В&nbsp;каталог</span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_663_1822)">
+                  <circle cx="11" cy="11" r="10" fill="#C998FB" stroke="#A65CF0" stroke-width="2"/>
+                  <path d="M9.625 7.5625L13.0625 11L9.625 14.4375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clippath id="clip0_663_18342">
+                    <rect width="22" height="22" fill="white"/>
+                  </clippath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="catalog__cards">
+      <h2 class="title catalog__cards-title  catalog__cards-title-desctop">Каталог</h2>
+      <div class="swiper catalog-swiper">
+        <ul class="swiper-wrapper catalog__swiper-wrapper">
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                5,0
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-1.webp, /img/webp/rating-card-img-1-2x.webp 2x, /img/webp/rating-card-img-1-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-1-1024.webp, /img/webp/rating-card-img-1-1024-2x.webp 2x, /img/webp/rating-card-img-1-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-1-768.webp, /img/webp/rating-card-img-1-768-2x.webp 2x, /img/webp/rating-card-img-1-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-1-320.webp, /img/webp/rating-card-img-1-320-2x.webp 2x, /img/webp/rating-card-img-1-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-1.png"
+                  srcset="/img/rating-card-img-1-2x.png 2x, /img/rating-card-img-1-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван кожаный “R&#8209;94”
+                </h3>
+                <span class="catalog__card-price">
+                  94&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,9
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-2.webp, /img/webp/rating-card-img-2-2x.webp 2x, /img/webp/rating-card-img-2-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-2-1024.webp, /img/webp/rating-card-img-2-1024-2x.webp 2x, /img/webp/rating-card-img-2-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-2-768.webp, /img/webp/rating-card-img-2-768-2x.webp 2x, /img/webp/rating-card-img-2-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-2-320.webp, /img/webp/rating-card-img-2-320-2x.webp 2x, /img/webp/rating-card-img-2-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-2.png"
+                  srcset="/img/rating-card-img-2-2x.png 2x, /img/rating-card-img-2-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван апартековый “T&#8209;75”
+                </h3>
+                <span class="catalog__card-price">
+                  69&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,8
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-3.webp, /img/webp/rating-card-img-3-2x.webp 2x, /img/webp/rating-card-img-3-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-3-1024.webp, /img/webp/rating-card-img-3-1024-2x.webp 2x, /img/webp/rating-card-img-3-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-3-768.webp, /img/webp/rating-card-img-3-768-2x.webp 2x, /img/webp/rating-card-img-3-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-3-320.webp, /img/webp/rating-card-img-3-320-2x.webp 2x, /img/webp/rating-card-img-3-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-3.png"
+                  srcset="/img/rating-card-img-3-2x.png 2x, /img/rating-card-img-3-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван тканевый “D&#8209;31”
+                </h3>
+                <span class="catalog__card-price">
+                  28&nbsp;490&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,8
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-4.webp, /img/webp/rating-card-img-4-2x.webp 2x, /img/webp/rating-card-img-4-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-4-1024.webp, /img/webp/rating-card-img-4-1024-2x.webp 2x, /img/webp/rating-card-img-4-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-4-768.webp, /img/webp/rating-card-img-4-768-2x.webp 2x, /img/webp/rating-card-img-4-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-4-320.webp, /img/webp/rating-card-img-4-320-2x.webp 2x, /img/webp/rating-card-img-4-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-4.png"
+                  srcset="/img/rating-card-img-4-2x.png 2x, /img/rating-card-img-4-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван велюровый “Y&#8209;68”
+                </h3>
+                <span class="catalog__card-price">
+                  22&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,8
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-5.webp, /img/webp/rating-card-img-5-2x.webp 2x, /img/webp/rating-card-img-5-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-5-1024.webp, /img/webp/rating-card-img-5-1024-2x.webp 2x, /img/webp/rating-card-img-5-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-5-768.webp, /img/webp/rating-card-img-5-768-2x.webp 2x, /img/webp/rating-card-img-5-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-5-320.webp, /img/webp/rating-card-img-5-320-2x.webp 2x, /img/webp/rating-card-img-5-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-5.png"
+                  srcset="/img/rating-card-img-5-2x.png 2x, /img/rating-card-img-5-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван из&nbsp;шинила “W&#8209;95”
+                </h3>
+                <span class="catalog__card-price">
+                  22&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,8
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-6.webp, /img/webp/rating-card-img-6-2x.webp 2x, /img/webp/rating-card-img-6-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-6-1024.webp, /img/webp/rating-card-img-6-1024-2x.webp 2x, /img/webp/rating-card-img-6-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-6-768.webp, /img/webp/rating-card-img-6-768-2x.webp 2x, /img/webp/rating-card-img-6-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-6-320.webp, /img/webp/rating-card-img-6-320-2x.webp 2x, /img/webp/rating-card-img-6-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-6.png"
+                  srcset="/img/rating-card-img-6-2x.png 2x, /img/rating-card-img-6-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван флоковый “G&#8209;41”
+                </h3>
+                <span class="catalog__card-price">
+                  17&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,8
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-7.webp, /img/webp/rating-card-img-7-2x.webp 2x, /img/webp/rating-card-img-7-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-7-1024.webp, /img/webp/rating-card-img-7-1024-2x.webp 2x, /img/webp/rating-card-img-7-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-7-768.webp, /img/webp/rating-card-img-7-768-2x.webp 2x, /img/webp/rating-card-img-7-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-7-320.webp, /img/webp/rating-card-img-7-320-2x.webp 2x, /img/webp/rating-card-img-7-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-7.png"
+                  srcset="/img/rating-card-img-7-2x.png 2x, /img/rating-card-img-7-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван шиниловый “V&#8209;43”
+                </h3>
+                <span class="catalog__card-price">
+                  19&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,7
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-8.webp, /img/webp/rating-card-img-8-2x.webp 2x, /img/webp/rating-card-img-8-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-8-1024.webp, /img/webp/rating-card-img-8-1024-2x.webp 2x, /img/webp/rating-card-img-8-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-8-768.webp, /img/webp/rating-card-img-8-768-2x.webp 2x, /img/webp/rating-card-img-8-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-8-320.webp, /img/webp/rating-card-img-8-320-2x.webp 2x, /img/webp/rating-card-img-8-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-8.png"
+                  srcset="/img/rating-card-img-8-2x.png 2x, /img/rating-card-img-8-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван велюровый “S&#8209;99”
+                </h3>
+                <span class="catalog__card-price">
+                  19&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,7
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-9.webp, /img/webp/rating-card-img-9-2x.webp 2x, /img/webp/rating-card-img-9-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-9-1024.webp, /img/webp/rating-card-img-9-1024-2x.webp 2x, /img/webp/rating-card-img-9-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-9-768.webp, /img/webp/rating-card-img-9-768-2x.webp 2x, /img/webp/rating-card-img-9-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-9-320.webp, /img/webp/rating-card-img-9-320-2x.webp 2x, /img/webp/rating-card-img-9-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-9.png"
+                  srcset="/img/rating-card-img-9-2x.png 2x, /img/rating-card-img-9-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван из&nbsp;кожзама “F&#8209;85”
+                </h3>
+                <span class="catalog__card-price">
+                  26&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,6
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-10.webp, /img/webp/rating-card-img-10-2x.webp 2x, /img/webp/rating-card-img-10-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-10-1024.webp, /img/webp/rating-card-img-10-1024-2x.webp 2x, /img/webp/rating-card-img-10-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-10-768.webp, /img/webp/rating-card-img-10-768-2x.webp 2x, /img/webp/rating-card-img-10-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-10-320.webp, /img/webp/rating-card-img-10-320-2x.webp 2x, /img/webp/rating-card-img-10-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-10.png"
+                  srcset="/img/rating-card-img-10-2x.png 2x, /img/rating-card-img-10-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван флоковый “H&#8209;64”
+                </h3>
+                <span class="catalog__card-price">
+                  25&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,6
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-11.webp, /img/webp/rating-card-img-11-2x.webp 2x, /img/webp/rating-card-img-11-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-11-1024.webp, /img/webp/rating-card-img-11-1024-2x.webp 2x, /img/webp/rating-card-img-11-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-11-768.webp, /img/webp/rating-card-img-11-768-2x.webp 2x, /img/webp/rating-card-img-11-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-11-320.webp, /img/webp/rating-card-img-11-320-2x.webp 2x, /img/webp/rating-card-img-11-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-11.png"
+                  srcset="/img/rating-card-img-11-2x.png 2x, /img/rating-card-img-11-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван флоковый “H&#8209;58”
+                </h3>
+                <span class="catalog__card-price">
+                  23&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,6
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-12.webp, /img/webp/rating-card-img-12-2x.webp 2x, /img/webp/rating-card-img-12-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-12-1024.webp, /img/webp/rating-card-img-12-1024-2x.webp 2x, /img/webp/rating-card-img-12-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-12-768.webp, /img/webp/rating-card-img-12-768-2x.webp 2x, /img/webp/rating-card-img-12-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-12-320.webp, /img/webp/rating-card-img-12-320-2x.webp 2x, /img/webp/rating-card-img-12-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-12.png"
+                  srcset="/img/rating-card-img-12-2x.png 2x, /img/rating-card-img-12-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван из&nbsp;кожзама &nbsp;”R&#8209;43”
+                </h3>
+                <span class="catalog__card-price">
+                  33&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,6
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-13.webp, /img/webp/rating-card-img-13-2x.webp 2x, /img/webp/rating-card-img-13-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-13-1024.webp, /img/webp/rating-card-img-13-1024-2x.webp 2x, /img/webp/rating-card-img-13-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-13-768.webp, /img/webp/rating-card-img-13-768-2x.webp 2x, /img/webp/rating-card-img-13-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-13-320.webp, /img/webp/rating-card-img-13-320-2x.webp 2x, /img/webp/rating-card-img-13-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-13.png"
+                  srcset="/img/rating-card-img-13-2x.png 2x, /img/rating-card-img-13-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван из&nbsp;шинила &nbsp;“С&#8209;42”
+                </h3>
+                <span class="catalog__card-price">
+                  18&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,6
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-14.webp, /img/webp/rating-card-img-14-2x.webp 2x, /img/webp/rating-card-img-14-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-14-1024.webp, /img/webp/rating-card-img-14-1024-2x.webp 2x, /img/webp/rating-card-img-14-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-14-768.webp, /img/webp/rating-card-img-14-768-2x.webp 2x, /img/webp/rating-card-img-14-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-14-320.webp, /img/webp/rating-card-img-14-320-2x.webp 2x, /img/webp/rating-card-img-14-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-14.png"
+                  srcset="/img/rating-card-img-14-2x.png 2x, /img/rating-card-img-14-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван велюровый &nbsp;“U&#8209;58”
+                </h3>
+                <span class="catalog__card-price">
+                  21&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,5
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-15.webp, /img/webp/rating-card-img-15-2x.webp 2x, /img/webp/rating-card-img-15-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-15-1024.webp, /img/webp/rating-card-img-15-1024-2x.webp 2x, /img/webp/rating-card-img-15-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-15-768.webp, /img/webp/rating-card-img-15-768-2x.webp 2x, /img/webp/rating-card-img-15-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-15-320.webp, /img/webp/rating-card-img-15-320-2x.webp 2x, /img/webp/rating-card-img-15-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-15.png"
+                  srcset="/img/rating-card-img-15-2x.png 2x, /img/rating-card-img-15-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван флоковый &nbsp;“F&#8209;41”
+                </h3>
+                <span class="catalog__card-price">
+                  17&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,5
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-16.webp, /img/webp/rating-card-img-16-2x.webp 2x, /img/webp/rating-card-img-16-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-16-1024.webp, /img/webp/rating-card-img-16-1024-2x.webp 2x, /img/webp/rating-card-img-16-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-16-768.webp, /img/webp/rating-card-img-16-768-2x.webp 2x, /img/webp/rating-card-img-16-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-16-320.webp, /img/webp/rating-card-img-16-320-2x.webp 2x, /img/webp/rating-card-img-16-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-16.png"
+                  srcset="/img/rating-card-img-16-2x.png 2x, /img/rating-card-img-16-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван велюровый &nbsp;“R&#8209;85”
+                </h3>
+                <span class="catalog__card-price">
+                  34&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,5
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-17.webp, /img/webp/rating-card-img-17-2x.webp 2x, /img/webp/rating-card-img-17-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-17-1024.webp, /img/webp/rating-card-img-17-1024-2x.webp 2x, /img/webp/rating-card-img-17-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-17-768.webp, /img/webp/rating-card-img-17-768-2x.webp 2x, /img/webp/rating-card-img-17-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-17-320.webp, /img/webp/rating-card-img-17-320-2x.webp 2x, /img/webp/rating-card-img-17-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-17.png"
+                  srcset="/img/rating-card-img-17-2x.png 2x, /img/rating-card-img-17-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван велюровый &nbsp;“S&#8209;44”
+                </h3>
+                <span class="catalog__card-price">
+                  19&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide catalog__card">
+            <div class="catalog__card-top">
+              <span class="catalog__card-stars">
+                <svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,4
+              </span>
+              <picture>
+                <source srcset="/img/webp/rating-card-img-18.webp, /img/webp/rating-card-img-18-2x.webp 2x, /img/webp/rating-card-img-18-3x.webp 3x" media="(min-width: 1280px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-18-1024.webp, /img/webp/rating-card-img-18-1024-2x.webp 2x, /img/webp/rating-card-img-18-1024-3x.webp 3x" media="(min-width: 992px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-18-768.webp, /img/webp/rating-card-img-18-768-2x.webp 2x, /img/webp/rating-card-img-18-768-3x.webp 3x" media="(min-width: 577px)" type="image/webp">
+                <source srcset="/img/webp/rating-card-img-18-320.webp, /img/webp/rating-card-img-18-320-2x.webp 2x, /img/webp/rating-card-img-18-320-3x.webp 3x" media="(max-width: 576px)" type="image/webp">
+
+                <img
+                  class="catalog__card-img"
+                  src="/img/rating-card-img-18.png"
+                  srcset="/img/rating-card-img-18-2x.png 2x, /img/rating-card-img-18-3x.png 3x"
+                  alt="Изображение дивана"
+                >
+              </picture>
+            </div>
+
+            <div class="catalog__card-inner">
+              <div class="catalog__card-describe">
+                <h3 class="title catalog__card-title">
+                  Диван из&nbsp;шинила &nbsp;“С&#8209;80”
+                </h3>
+                <span class="catalog__card-price">
+                  20&nbsp;990&nbsp;руб
+                </span>
+                <a href="product-card.html" class="btn-reset btn catalog__card-btn">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination catalog__pagination"></div>
+    </div>
+  </div>
+</section>

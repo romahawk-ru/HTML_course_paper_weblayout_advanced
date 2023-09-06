@@ -1,0 +1,15 @@
+import './components/choices-region';
+import './components/choices-category';
+import './components/hero-swiper';
+import './components/special-offers-carousel';
+import './components/open-rating-cards';
+import './components/useful-carousel';
+import './components/header-burger';
+import './components/catalog-range-slider';
+import './components/catalog-swiper';
+import './components/product-card-swiper';
+import './components/product-slider-carousel';
+import './components/product-card-modals';
+import './components/jast-validate-form';
+import './components/jast-validate-modal-form';
+import './components/catalog-filter-ceckbox';

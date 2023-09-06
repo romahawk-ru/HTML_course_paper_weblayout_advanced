@@ -1,0 +1,497 @@
+.special-offers {
+
+  // стили трека слайдов
+  & .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 511px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  // стили слайда
+  & .slick-slide {
+    margin: 0 32px 0 0;
+    max-width: 296px;
+
+    & > div {
+      height: 100%;
+    }
+
+    // коррекция отступов под PixelPerfect
+    &:first-child {
+      & .special-offers__card-title {
+        margin-bottom: 20px;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 100% !important;
+      max-width: 624px;
+    }
+
+    &:nth-child(3) {
+      margin: 0;
+    }
+
+    &:nth-child(5) {
+      width: 100% !important;
+      max-width: 624px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  // стили для карточек товаров
+  &__card {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 30px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--color-grey-light);
+
+    // добавление доп картики для карточки товара
+    &--bgimg1 {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        width: 230px;
+        height: 107px;
+        background-image: url(../img/special-offers-card-img-tramsparent-1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    // добавление доп картики для карточки товара
+    &--bgimg2 {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        width: 234px;
+        height: 124px;
+        background-image: url(../img/special-offers-card-img-tramsparent-2.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    // стили для акции
+    &-sale {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 92px;
+      height: 34px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--color-white);
+      background-image: url(../img/sale-bg-img.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+
+    &-img {
+      margin-bottom: 16px;
+    }
+
+    &-describe {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 100%;
+
+      &-btn {
+        padding: 17px 34px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 22px;
+      max-width: 225px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: var(--color-black);
+    }
+
+    &-price-box {
+      margin-bottom: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &-price {
+      margin-right: 30px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      color: var(--color-secondary);
+      pointer-events: none;
+
+      &--discount {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--color-grey);
+        text-decoration-line: line-through;
+      }
+    }
+  }
+
+  // общие стили для стрелок
+  .slick-arrow {
+    position: absolute;
+    top: -58px;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    line-height: 0;
+    outline: none;
+    cursor: pointer;
+
+    & > svg path {
+      transition: stroke .3s ease-in-out;
+    }
+
+    & > svg circle {
+      transition: stroke .3s ease-in-out, fill .3s ease-in-out;
+    }
+
+    &:hover {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary);
+        fill: var(--color-primary);
+      }
+    }
+
+    &:focus-visible {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary);
+        fill: var(--color-primary-light);
+      }
+    }
+
+    &:active {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary-shade);
+        fill: var(--color-primary-shade);
+      }
+    }
+  }
+
+  // стили для стрелки предыдущий слайд
+  .slick-prev {
+    right: 45px;
+    transform: rotate(180deg);
+
+    & svg circle {
+      fill: transparent;
+    }
+
+    & svg path {
+      stroke: var(--color-primary);
+    }
+
+  }
+
+  // стили для стрелки следующий слайд
+  .slick-next {
+    right: 0;
+
+    & svg circle {
+      fill: transparent;
+    }
+
+    & svg path {
+      stroke: var(--color-primary);
+    }
+  }
+
+  // стили для не активной стрелки
+  .slick-disabled {
+
+    & svg circle {
+      fill: transparent;
+      stroke: var(--color-grey);
+    }
+
+    & svg path {
+      stroke: var(--color-grey);
+    }
+  }
+
+  // костыль // сброс стилей для не активной стрелки
+  .slick-arrow.slick-disabled {
+    &:hover {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+
+    &:focus-visible {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+
+    &:active {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 1280px) {
+
+  .special-offers {
+    &__container {
+      max-width: 981px;
+    }
+
+    &__card {
+      &-title {
+        margin-bottom: 21px;
+        line-height: 129%;
+      }
+      &-price {
+        &-box {
+          margin-bottom: 22px;
+        }
+      }
+    }
+
+      // стили слайда
+    & .slick-slide {
+      width: 100% !important;
+
+      &:first-child {
+        & .special-offers__card-title {
+          margin-bottom: 20px;
+        }
+
+        & .special-offers__card-price-box {
+          margin-bottom: 23px;
+        }
+
+        & .special-offers__card-img {
+          margin-bottom: 17px;
+        }
+      }
+
+      & > div {
+        height: 100%;
+      }
+
+      &:nth-child(2) {
+        max-width: 296px;
+
+        // поднятие изображения по PP
+        & > div {
+          & > .special-offers__card {
+            & > picture {
+              & > .special-offers__card-img {
+                margin-bottom: 49px;
+              }
+            }
+          }
+        }
+
+      }
+
+      &:nth-child(3) {
+        & > div {
+          & > .special-offers__card {
+            & > picture {
+              & > .special-offers__card-img {
+                margin-right: -2px;
+                margin-bottom: 17px;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        max-width: 296px;
+
+        // поднятие изображения по PP
+        & > div {
+          & > .special-offers__card {
+            & > picture {
+              & > .special-offers__card-img {
+                margin-bottom: 47px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // скрытие дополнительных картинок
+    &__card {
+      &--bgimg1 {
+        &::after {
+          content: none;
+        }
+      }
+
+      &--bgimg2 {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+
+  .special-offers {
+    &__container {
+      max-width: 654px;
+    }
+
+    & .slick-slide {
+
+      &:first-child {
+        margin: 0 32px 0 0;
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3) {
+        margin: 0 32px 0 0;
+      }
+
+      &:nth-child(4) {
+        margin: 0;
+      }
+
+      &:nth-child(5) {
+        margin: 0 32px 0 0;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+
+  .special-offers {
+    &__container {
+      padding: 0 4px 48px 4px;
+      max-width: 303px;
+    }
+
+    .slick-track {
+      margin: 0 -7px;
+    }
+
+    .slick-slide {
+      margin: 0!important;
+      padding: 0 7px;
+      max-width: 296px;
+
+      &:first-child {
+        .special-offers__card-price-box {
+          margin-bottom: 22px;
+        }
+      }
+    }
+
+    &__card {
+      width: 105% !important;
+
+      &-sale {
+        padding: 7px 7px 7px 19px;
+        display: block;
+      }
+
+      &-title {
+        margin-bottom: 21px;
+      }
+
+      &-describe-btn {
+        padding: 17px 33px;
+      }
+    }
+
+    .slick-prev {
+      bottom: -48px;
+      left: 109px;
+      top: auto;
+      right: auto;
+    }
+
+    .slick-next {
+      right: 109px;
+      bottom: -48px;
+      top: auto;
+    }
+  }
+}

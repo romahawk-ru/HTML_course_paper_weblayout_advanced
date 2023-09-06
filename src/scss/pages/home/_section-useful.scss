@@ -1,0 +1,270 @@
+.useful {
+  &__container {
+    padding-bottom: 70px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    border-radius: 10px;
+    background-color: var(--color-grey-light);
+
+    &-img {
+      display: block;
+      border-radius: 10px 10px 0 0;
+      max-width: 100%;
+    }
+
+    &-describe {
+      padding: 30px 30px 30px 31px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      min-height: 250px;
+    }
+
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+      color: var(--color-black);
+    }
+
+    &-btn {
+      padding: 17px 33px;
+    }
+  }
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+
+  .slick-slide {
+    padding: 0 15px;
+  }
+
+  // общие стили для стрелок
+  .slick-arrow {
+    position: absolute;
+    top: -58px;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    line-height: 0;
+    outline: none;
+    cursor: pointer;
+
+    & > svg path {
+      transition: stroke .3s ease-in-out;
+    }
+
+    & > svg circle {
+      transition: stroke .3s ease-in-out, fill .3s ease-in-out;
+    }
+
+    &:hover {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary);
+        fill: var(--color-primary);
+      }
+    }
+
+    &:focus-visible {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary);
+        fill: var(--color-primary-light);
+      }
+    }
+
+    &:active {
+      & > svg path {
+        stroke: var(--color-white);
+      }
+
+      & > svg circle {
+        stroke: var(--color-primary-shade);
+        fill: var(--color-primary-shade);
+      }
+    }
+  }
+
+  // стили для стрелки предыдущий слайд
+  .slick-prev {
+    right: 45px;
+    transform: rotate(180deg);
+
+    & svg circle {
+      fill: transparent;
+    }
+
+    & svg path {
+      stroke: var(--color-primary);
+    }
+
+  }
+
+  // стили для стрелки следующий слайд
+  .slick-next {
+    right: 0;
+
+    & svg circle {
+      fill: transparent;
+    }
+
+    & svg path {
+      stroke: var(--color-primary);
+    }
+  }
+
+  // стили для не активной стрелки
+  .slick-disabled {
+
+    & svg circle {
+      fill: transparent;
+      stroke: var(--color-grey);
+    }
+
+    & svg path {
+      stroke: var(--color-grey);
+    }
+  }
+
+  // костыль // сброс стилей для не активной стрелки
+  .slick-arrow.slick-disabled {
+    &:hover {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+
+    &:focus-visible {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+
+    &:active {
+      & > svg path {
+        stroke: var(--color-grey);
+      }
+
+      & > svg circle {
+        fill: transparent;
+        stroke: var(--color-grey);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1280px) {
+
+  .useful {
+    &__container {
+      max-width: 981px;
+    }
+
+    &__item {
+      &-text {
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    &__item-describe {
+      min-height: 254px;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+
+  .useful {
+    &__container {
+      max-width: 654px;
+    }
+
+    &__item {
+      &-img {
+        max-width: 100%;
+      }
+    }
+
+    .slick-list {
+      margin: 0 -15px;
+    }
+
+    .slick-slide {
+      padding: 0 15px;
+    }
+  }
+
+}
+
+@media (max-width: 568px) {
+
+  .useful {
+    &__container {
+      padding: 0 4px 70px 4px;
+      max-width: 303px;
+    }
+
+    &__item {
+      &-img {
+        max-width: 100%;
+      }
+      &-describe {
+        padding: 31px 30px 30px 30px;
+      }
+    }
+
+    .slick-list {
+      margin: 0 -4px;
+    }
+
+    .slick-slide {
+      margin: 0 4px;
+      padding: 0;
+      max-width: 296px;
+    }
+
+    .slick-prev {
+      top: auto;
+      bottom: -48px;
+      left: 110px;
+    }
+
+    .slick-next {
+      top: auto;
+      right: 108px;
+      bottom: -48px;
+    }
+  }
+
+}
